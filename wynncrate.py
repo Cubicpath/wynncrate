@@ -3,7 +3,7 @@ from selenium.common.exceptions import NoSuchElementException
 from datetime import datetime
 from subprocess import run
 from sys import platform, argv
-from os import path, mkdir, name as os_name
+from os import path, mkdir
 from random import randint
 import atexit
 
@@ -18,7 +18,7 @@ class Client:
         log_name = f'./logs/{log_name}'
         mkdir('./logs/') if (log_name.startswith('./logs/') and not path.isdir('./logs/')) else None
         self.print_messages = print_messages
-        self.browser = webdriver.Firefox(executable_path=self.WIN_DRIVER if os_name == 'nt' else self.NIX_DRIVER, service_log_path=log_name, timeout=10)
+        self.browser = webdriver.Firefox(executable_path=self.WIN_DRIVER if platform == 'win32' else self.NIX_DRIVER, service_log_path=log_name, timeout=10)
         self.browser.get(self.SITE_URL)
 
     def _print(self, message: str):
