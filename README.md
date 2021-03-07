@@ -1,6 +1,5 @@
 About:
-=====
------
+======
 WynncraftCrate is a small script built on [Selenium](https://www.selenium.dev/selenium/docs/api/py/) that facilitates easy automation of free crate collection from the [Wynncraft Store](https://store.wynncraft.com).
 
 This project uses Firefox's geckodriver, you can find the source code [here](https://github.com/mozilla/geckodriver/releases).
@@ -10,8 +9,7 @@ This project uses Firefox's geckodriver, you can find the source code [here](htt
 _Requirements can be found in [requirements.txt](requirements.txt)._
 
 How to use:
--------------
--------------
+-----------
 There are three ways you can use this script:
 
 1. Launch it directly for manual crate collection.
@@ -20,8 +18,7 @@ There are three ways you can use this script:
 3. Import the "Client" class in [wynncraftcrate.py](wynncrate.py) for use in your own Python projects.
 
 Documentation:
------------------------
------------------------
+--------------
     class Client: Handles Selenium logic for the Wynncraft store, uses the Firefox geckodriver for website interaction.
         param log_filepath: Where to store the Selenium log file. By default it generates one log per object initialized.
         param print_messages: Whether to print messages to stdout or not.
@@ -37,7 +34,6 @@ Documentation:
         method wynn_store_checkout: Attempts to checkout items from the Wynncraft Store.
         method wynn_store_login: Attempts to login to the Wynncraft store from the store homepage.
         method wynn_store_logout: Logout from the Wynncraft store.
-            
         method quit: Logs out of Wynncraft Store and quits the browser.
 
     func main: called when __name__ == '__main__' and arguments are valid. Houses CLI interaction.
