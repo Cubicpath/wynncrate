@@ -14,8 +14,8 @@ There are three ways you can use this script:
 
 1. Launch it directly for manual crate collection.
 2. Automate the program using ONE command-line argument. (it will automatically close the browser when done)
-    1. Usage: wynncraftcrate.py "username1,user name2, username 3" (Separate usernames with commas)
-3. Import the "Client" class in [wynncraftcrate.py](wynncrate.py) for use in your own Python projects.
+    1. Usage: wynncrate.py "username1,user name2, username 3" (Separate usernames with commas)
+3. Import the "Client" class in [wynncrate.py](wynncrate.py) for use in your own Python projects.
 
 Documentation:
 --------------
