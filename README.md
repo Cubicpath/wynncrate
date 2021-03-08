@@ -37,4 +37,4 @@ Documentation:
         method quit: Logs out of Wynncraft Store and quits the browser.
 
     func main: called when __name__ == '__main__' and arguments are valid. Houses CLI interaction.
-        func _clear_screen: Used to reset display text in the CLI.
+        func clear_screen: Used to reset display text in the CLI.
