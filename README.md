@@ -1,6 +1,6 @@
 About:
 ======
-WynncraftCrate is a small script built on [Selenium](https://www.selenium.dev/selenium/docs/api/py/) that facilitates easy automation of free crate collection from the [Wynncraft Store](https://store.wynncraft.com).
+WynnCrate is a small script built on [Selenium](https://www.selenium.dev/selenium/docs/api/py/) that facilitates easy automation of free crate collection from the [Wynncraft Store](https://store.wynncraft.com).
 
 This project uses Firefox's geckodriver, you can find the source code [here](https://github.com/mozilla/geckodriver/releases).
 
