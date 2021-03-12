@@ -1,11 +1,17 @@
-from selenium import webdriver
-from selenium.common.exceptions import NoSuchElementException
+###################################################################################################
+#                              MIT Licence (C) 2021 Cubicpath@Github                              #
+###################################################################################################
+"""A small script built on Selenium that facilitates easy automation of free
+crate collection from the Wynncraft Store."""
+
+import atexit
 from datetime import datetime
-from subprocess import run
-from sys import platform, argv
 from os import path, mkdir
 from random import randint
-import atexit
+from sys import platform, argv
+from subprocess import run
+from selenium import webdriver
+from selenium.common.exceptions import NoSuchElementException
 
 
 class Client:
@@ -103,7 +109,7 @@ def main(*args):
 
     while True:
         usernames = []
-        for username in (args[0].strip().split(',') if args else input("Enter usernames to get crates for, separate usernames with ','\n").strip().split(',')):
+        for username in args[0].strip().split(',' if args else input("Enter usernames to get crates for, separate usernames with ','\n").strip().split(',')):
             usernames.append(username.strip())
         print(usernames)
 
@@ -115,7 +121,7 @@ def main(*args):
 
 
 if __name__ == '__main__':
-    if not len(argv) > 2:
+    if len(argv) <= 2:
         main(argv[1]) if len(argv) == 2 else main()
     else:
         raise ValueError(f'Please only use one argument ex: [{argv[0]} "username1,user name2, username 3"]')
